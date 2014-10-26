@@ -6,10 +6,10 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Find My Doctor</name>
 
     <description>
-        Hello World sample application with Pushwoosh Phonegap push notifications plugin integrated
+        Find My Doctor is an application that lets you search for a General Physician near you as well connect with him for consultation.
     </description>
 
     <author href="http://pushwoosh.com" email="support@pushwoosh.com">
@@ -35,7 +35,7 @@
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
-    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
     <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
