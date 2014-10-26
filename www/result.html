@@ -29,40 +29,33 @@
         <title>Find My Doctor</title>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="col-xs-12 col-sm-6 center">
-                <h2><span class="fa fa-stethoscope"></span> Find My Doctor</h2>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               
+              <a class="navbar-brand" href="index2.html"><span class="fa fa-lg fa-stethoscope"></span> Sec 9, Vashi</a> 
+              
+              <button class="pull-right no-border">
+                <span class="fa fa-fw fa-2x fa-filter"></span>
+              </button> 
+              <button class="pull-right no-border">
+                <span class="fa fa-fw fa-2x fa-map-marker"></span>
+              </button> 
             </div>
 
-            <div class="row">
-            <div class="col-xs-12 col-sm-6 search">
-                <h4>Where to search for?</h4>
-                <div class="input-group">
-                    
-                    <input type="text" class="form-control" id="searchlocn">
-                    <span class="input-group-btn">
-                        <a href="result.html" class="btn btn-primary" role="button">Go!</a>
-                    </span>
-                    
-                </div>
-                <p class="small">Currently using your GPS location.</p> 
-            </div>
-            <div  class="col-xs-12 col-sm-6 recent">
-                <div id="recent">
-                <div class="panel panel-default">
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">Recently viewed</div>
-                  <!-- List group -->
-                  <ul class="list-group">
-                    <li class="list-group-item">Dr. Anant Gore</li>
-                    <li class="list-group-item">View more...</li>
-                  </ul>
-                </div>
-                </div>
-            </div>
-        </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 
 
+        <result class="col-xs-12">
+
+            <a href="index.html" class="btn btn-primary" role="button">index1</a>
+            <a href="index2.html" class="btn btn-primary" role="button">index2</a>
+        </result>
 
 
 
@@ -75,15 +68,12 @@
         
         <script type="text/javascript" src="js/index.js">
 
-
+           
 
         </script>
         
         <script type="text/javascript">
-            document.getElementById("searchlocn").defaultValue = "Sec 9, Vashi";
             
-            document.getElementById("recent").className = "hideMe";
-
             //app.initialize();
         </script>
     </body>
