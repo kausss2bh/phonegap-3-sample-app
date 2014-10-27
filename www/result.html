@@ -203,7 +203,7 @@
 
     <!-- Menu Toggle Script -->
     <script>
-    $(function(){
+    
         $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
@@ -211,20 +211,9 @@
         $("#pad").toggleClass("pad60");
    // jQuery methods go here...
 
-        var n = message.length
-
-        if(n > 0){
-            $("#notif").toggleClass("hideMe");
-            $("#notif").document.write(message)
-
-        }
 
 
-    }); 
     
-        
-         
-    });
     app.initialize();
 
 
