@@ -36,6 +36,7 @@ function registerPushwooshAndroid() {
 			//and show alert
 			alert(title);
 
+
 			//stopping geopushes
 			pushNotification.stopGeoPushes();
 		}
@@ -51,7 +52,7 @@ function registerPushwooshAndroid() {
 	pushNotification.registerDevice({ projectid: "678609895444", appid : "6829E-CECA6" },
 		function(token)
 		{
-			alert(token);
+			//alert(token);
 			//callback when pushwoosh is ready
 			onPushwooshAndroidInitialized(token);
 		},
