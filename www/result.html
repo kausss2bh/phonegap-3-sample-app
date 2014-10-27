@@ -94,6 +94,10 @@
                         <p class="small">Viewing doctors in Sec 9, Vashi</p>
                     </div>
 
+                    <div id="notif" class="hideMe">
+
+                    </div>    
+
                     <ul class="media-list">
                       <li class="media">
                         <a class="pull-left" href="#">
@@ -170,6 +174,9 @@
                     <a href="index.html" class="btn btn-primary" role="button">index1</a>
                     <a href="index2.html" class="btn btn-primary" role="button">index2</a>
                 </result>
+
+
+
             
 
 
@@ -182,8 +189,11 @@
 
     <!-- jQuery Version 1.11.0 -->
 
+    
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+
     <script type="text/javascript" src="PushNotification.js"></script>
     <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
     <script type="text/javascript" src="js/PushwooshiOS.js"></script>
@@ -193,15 +203,32 @@
 
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
+    $(function(){
+        $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
         $("#navbar").toggleClass("navbar-fixed-top");
         $("#pad").toggleClass("pad60");
+   // jQuery methods go here...
+
+        var n = message.length
+
+        if(n > 0){
+            $("#notif").toggleClass("hideMe");
+            $("#notif").document.write(message)
+
+        }
+
+
+    }); 
+    
         
          
     });
     app.initialize();
+
+
+
     </script>
 
 </body>
