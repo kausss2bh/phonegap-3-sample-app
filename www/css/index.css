@@ -86,7 +86,36 @@ body {
     margin:0px;
     margin-top:0px;
     padding:10px;
+    padding-left:0px;
+    padding-right:2px;
     
+}
+
+.pad60{
+    padding-top:55px;
+}
+
+.viewinfo{
+    
+    margin-bottom:10px;
+}
+
+.small{
+    margin-bottom:3px;
+}
+#nav-search{
+    height:34px;
+    border-radius-top-left:3px;
+    border-radius-bottom-left:3px;
+}
+.nav-search{
+    padding-top:7px;
+    max-width:59%;
+    
+}
+
+.padtop10{
+    padding-top:10px;
 }
 
 /* Landscape layout (with min-width) */
