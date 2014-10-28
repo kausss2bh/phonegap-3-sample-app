@@ -74,20 +74,146 @@
                             
                         </div>
                       </form>
-                          
-                      <button class="pull-right no-border">
+                      
+                      
+                      
+                       
+                      <a href="#" class="pull-right no-border" data-toggle="modal" data-target=".bs-example-modal-lg">
                         <span class="fa fa-fw fa-2x fa-filter"></span>
-                      </button> 
-                      <a href="DemoApp/index.html" class="pull-right no-border">
+                      </a>             
+                      
+                      <a href="map1.html" class="pull-right no-border">
                         <span class="fa fa-fw fa-2x fa-map-marker"></span>
                       </a> 
+
+                     
+
                     </div>
                            <!-- Collect the nav links, forms, and other content for toggling -->
                     <!-- /.navbar-collapse -->
                   </div>
+
                   <!-- /.container-fluid -->
                 </nav>
 
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                
+                                
+                                <h3>Filter</h3>
+
+                                <b>Fees</b><br>
+                                Set upper limit
+                                <div id="slider">
+                                <input class="bar" type="range" id="rangeinput" value="50" />
+                                <span class="highlight"></span>
+                                
+                                </div>
+                                <div class="pull-left">
+                                <span class="fa fa-inr"></span>0
+                                </div>
+                                <div class="pull-right">
+                                <span class="fa fa-inr"></span>600
+                                </div>
+                                <br>
+                                <br>
+                                <b>Timing</b>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="checkbox" > Available Now<br>
+                                        <input type="checkbox" > Monday<br>
+                                        <input type="checkbox" > Tuesday<br>
+                                        <input type="checkbox" > Wednesday<br>
+                                        
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="checkbox" > Thursday<br> 
+                                        <input type="checkbox" > Friday<br>
+                                        <input type="checkbox" > Saturday<br>
+                                        <input type="checkbox" > Sunday<br>
+                                        
+                                    </div>
+                                </div>
+                                <div id="slider">
+                                <input class="bar" type="range" id="rangeinput" value="50" />
+                                <span class="highlight"></span>
+                                
+                                </div>
+                                <div class="pull-left">
+                                8:30 AM
+                                </div>
+                                <div class="pull-right">
+                                10:00 PM
+                                </div>
+                                <br>
+                                <br>
+                                <b>Distance</b><br>
+                                Set maximum limit
+                                <div id="slider">
+                                <input class="bar" type="range" id="rangeinput" value="50" />
+                                <span class="highlight"></span>
+                                
+                                </div>
+                                <div class="pull-left">
+                                0 km
+                                </div>
+                                <div class="pull-right">
+                                30 km
+                                </div>
+                                <br>
+                                <br>
+                                <b>Languages Spoken</b><br>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="checkbox" > English<br>
+                                        <input type="checkbox" > Hindi<br>
+                                        <input type="checkbox" > Marathi<br>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="checkbox" > Gujarati<br>
+                                        <input type="checkbox" > Tamil<br> 
+                                    </div>
+                                </div>
+                                <br>
+                                <b>Gender</b><br>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="radio" > Female<br>
+                                        
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="radio" > Male<br>
+                                        
+                                    </div>
+                                </div>
+                                <br>
+                                <b>Experience</b><br>
+                                Set minimum limit
+                                <div id="slider">
+                                <input class="bar" type="range" id="rangeinput" value="50" />
+                                <span class="highlight"></span>
+                                
+                                </div>
+                                <div class="pull-left">
+                                0
+                                </div>
+                                <div class="pull-right">
+                                30 years
+                                </div>
+                                <br>
+                                <br>
+
+                                <br>
+
+                                <div class="center-content">
+                                <a href="#" class="btn btn-success" data-dismiss="modal">Apply Filter</a>    
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                </div>
+                                <br>
+                            </div>
+                          </div>
+                        </div>
             
                 <result id="pad" class="pad60 col-xs-12">
                     <div class="viewinfo">

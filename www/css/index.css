@@ -56,11 +56,13 @@ a:hover{
 
 .search{
     height:90px;
-    
-    margin-top:250px;
+
+    position:absolute;
+    top:0;
+    bottom:0;
     left: 0;
     right: 0;
-
+    margin:auto;
 }
 
 .hideMe{
@@ -221,13 +223,24 @@ a:hover{
 }
 
 .modal-content{
-    padding:10px;
-
-    
+    padding:15px;    
 }
 
 .center-content{
     text-align:center;
+}
+
+#more img{
+    width:100%;
+}
+
+
+.navbar-fixed-bottom{
+    padding:5px;
+    background:#abc;
+}
+.navbar-fixed-bottom .btn{
+    border-radius:0px;
 }
 
 /* Landscape layout (with min-width) */
