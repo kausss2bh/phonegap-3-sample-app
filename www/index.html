@@ -25,41 +25,57 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css" />
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <title>Find My Doctor</title>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="col-xs-12 col-sm-6 center">
-                <h2><span class="fa fa-stethoscope"></span> Find My Doctor</h2>
-            </div>
+        <div id="wrapper">
 
-            <div class="row">
-            <div class="col-xs-12 col-sm-6 search">
-                <h4>Where to search for?</h4>
-                <div class="input-group">
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <li><a href="#"><h3>Find My Doctor</h3></a></li>
                     
-                    <input type="text" class="form-control" id="searchlocn">
-                    <span class="input-group-btn">
-                        <a href="result.html" class="btn btn-primary" role="button">Go!</a>
-                    </span>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recently Viewed</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Help</a></li>
+
                     
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+
+            <div class="container-fluid">
+                <div class="col-xs-12 col-sm-6 center">
+                    <h2><a href="#menu-toggle" id="menu-toggle"><span class="fa fa-stethoscope"></span></a> Find My Doctor</h2>
                 </div>
-                <p class="small">Currently using your GPS location.</p> 
+
+                <div class="row">
+                <div class="col-xs-12 col-sm-6 search">
+                    <h4>Where to search for?</h4>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="searchlocn">
+                        <span class="input-group-btn">
+                            <a href="result.html" class="btn btn-primary" role="button">Go!</a>
+                        </span>
+                        
+                    </div>
+                    <p class="small">Currently using your GPS location.</p> 
+                </div>
+                
             </div>
-            <div  class="col-xs-12 col-sm-6 recent">
-                <div id="recent">
-                <div class="panel panel-default">
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">Recently viewed</div>
-                  <!-- List group -->
-                  <ul class="list-group">
-                    <li class="list-group-item">Dr. Anant Gore</li>
-                    <li class="list-group-item">View more...</li>
-                  </ul>
-                </div>
-                </div>
-            </div>
+        </div>
         </div>
 
 
@@ -73,19 +89,27 @@
         <script type="text/javascript" src="js/PushwooshiOS.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        
-        <script type="text/javascript" src="js/index.js">
-
-
-
-        </script>
-        
-        <script type="text/javascript">
-            document.getElementById("searchlocn").defaultValue = "Sec 9, Vashi";
             
-            document.getElementById("recent").className = "hideMe";
+        <script type="text/javascript" src="js/index.js"></script>
+        
 
-            app.initialize();
+        <!-- Menu Toggle Script -->
+        <script>
+        
+
+        document.getElementById("searchlocn").defaultValue = "BPT, Sec 9, Vashi";
+            
+            
+
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            
+             
+        });
+        app.initialize();
         </script>
+        
+        
     </body>
 </html>

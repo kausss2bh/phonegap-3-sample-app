@@ -30,6 +30,16 @@ body {
     
 }
 
+
+a{
+    color:#000;
+}
+
+a:hover{
+    color:#000;
+    text-decoration:none;
+}
+
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
@@ -46,13 +56,11 @@ body {
 
 .search{
     height:90px;
-    position: absolute;
-    top:0;
-    bottom: 0;
+    
+    margin-top:250px;
     left: 0;
     right: 0;
 
-    margin: auto;
 }
 
 .hideMe{
@@ -105,7 +113,7 @@ body {
 }
 #nav-search{
     height:34px;
-    border-radius-top-left:3px;
+    border-radius-top-left:5px;
     border-radius-bottom-left:3px;
 }
 .nav-search{
@@ -116,6 +124,110 @@ body {
 
 .padtop10{
     padding-top:10px;
+}
+
+.media{
+    
+    background:rgba(248, 248, 248,1);
+    border-radius:3px;
+    margin-bottom:12px;
+    margin-top:12px;
+}
+
+.friend{
+    background:rgba(240, 240, 240,1);
+    margin-bottom:20px;
+}
+
+.media-body{
+    padding-left:10px;
+    padding-top:5px;
+    padding-right:10px;
+}
+.media > .pull-left {
+    margin-right:0px;
+}
+
+.media-heading{
+    font-size:15px;
+    margin-bottom:10px;
+}
+.media-heading2{
+    margin:0px;
+    font-size:15px;
+}
+
+.media-footer{
+    /*background:rgba(200, 255, 194, 1);*/
+    font-size:12px;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:right;
+    padding-bottom:3px;
+
+}
+
+.media-footer2{
+    /*background:rgba(200, 255, 194, 1);*/
+    font-size:12px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:8px;
+    padding-bottom:3px;
+
+}
+.media-footer3{
+    /*background:rgba(200, 255, 194, 1);*/
+    font-size:12px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:2px;
+    padding-bottom:3px;
+
+}
+
+.media-footer2 .row{
+    padding-bottom:7px;
+}
+
+
+.fees{
+    padding-top:2px;
+    font-size:12px;
+    font-style:normal;
+}
+
+.doc-info{
+    font-size:12px;
+    padding-bottom:7px;
+    line-height:22px;
+
+}
+.doc-info2{
+    font-size:12px;
+    padding-bottom:7px;
+}
+
+#docdetails{
+    padding-top:5px;
+}
+
+.docdetails{
+    margin-top:20px;
+}
+
+.addr{
+    padding-top:10px;
+}
+
+.modal-content{
+    padding:10px;
+
+    
+}
+
+.center-content{
+    text-align:center;
 }
 
 /* Landscape layout (with min-width) */

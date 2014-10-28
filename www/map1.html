@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>Find My Doctor</title>
+
+
+
+
+  
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"rel="stylesheet"type="text/css" />
+	<script type="text/javascript" src="js/googlemap.js"></script>
+    <script type="text/javascript" src="js/reachability.js"></script>
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+<script>
+	if (navigator.userAgent.toLowerCase().match(/android/)) {
+        document.write('<script charset="utf-8" src="cordova-1.5.0-android.js"><\/script>');
+    } 
+    else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+        document.write('<script charset="utf-8" src="cordova-1.5.0.js"><\/script>');
+    }
+</script>
+    <script type="text/javascript">
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad(){		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+        
+	/* When this function is called, Cordova has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+        var reachability = new Reachability();
+        if(reachability.IsNotConnected()){
+            navigator.notification.alert('No internet connection available',null, '', 'OK');
+        }
+        else{
+            var map = new GoogleMap();
+            map.initialize();
+        }
+    }
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+      	
+  		<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <li><a href="#"><h3>Find My Doctor</h3></a></li>
+                    
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recently Viewed</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Help</a></li>
+                    
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                       
+                       
+                      <a href="#menu-toggle" class="navbar-brand" id="menu-toggle"><span class="fa fa-lg fa-stethoscope"></span></a>
+
+                      <form class="pull-left nav-search" role="search">
+                        <div class="input-group">
+                            
+                            <input id="nav-search" type="text" class="form-control" placeholder="doctor / clinic / hospital">
+                            <span class="input-group-btn">
+                                <a href="result.html" class="btn btn-default" role="button"><span class="fa fa-search"></span></a>
+                            </span>
+                            
+                        </div>
+                      </form>
+                          
+                      <button class="pull-right no-border">
+                        <span class="fa fa-fw fa-2x fa-filter"></span>
+                      </button> 
+                      <a href="result.html" class="pull-right no-border">
+                        <span class="fa fa-fw fa-2x fa-list"></span>
+                      </a>
+                    </div>
+                           <!-- Collect the nav links, forms, and other content for toggling -->
+                    <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+                </nav>
+
+
+
+		      	<div id="map_canvas" class="col-xs-12">
+		          Couldn't load map because there was no internet connection available
+				</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="PushNotification.js"></script>
+
+    <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
+    <script type="text/javascript" src="js/PushwooshiOS.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+    <script type="text/javascript" src="js/index.js"></script>
+    
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#navbar").toggleClass("navbar-fixed-top");
+        
+         
+    });
+    app.initialize();
+    </script>
+
+  </body>
+</html>
+
+
