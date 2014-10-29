@@ -35,7 +35,7 @@ function registerPushwooshAndroid() {
 
 			//and show alert
 			
-			alert(title + " " + userData);
+			alert(title);
 
 
 			//stopping geopushes
