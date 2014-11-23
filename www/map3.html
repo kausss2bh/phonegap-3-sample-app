@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
 
-<head>
+    http://www.apache.org/licenses/LICENSE-2.0
 
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Find My Doctor</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
+        <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>Find My Doctor</title>
+    </head>
+    <body>
+        <div id="wrapper">
 
-
-    
-
-    <!-- Bootstrap Core CSS -->
-    
-
-    <!-- Custom CSS -->
-    
-    
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
@@ -49,6 +44,7 @@
                 <li><a href="appointment.html">Appointments</a></li>
                 <li><a href="#">Sign In</a></li>
                 <li><a href="#">Help</a></li>
+                
                     
             </ul>
         </div>
@@ -56,50 +52,45 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+
+
+
             <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
                   <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                        
                        
-                      <a href="#menu-toggle" class="navbar-brand" id="menu-toggle"><span class="fa fa-lg fa-stethoscope"></span></a>
-
+                      <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="fa fa-lg fa-stethoscope"></span></a>
                       <form class="pull-left nav-search" role="search">
                         <div class="input-group">
                             
                             <input id="nav-search" type="text" class="form-control" placeholder="Dr. Mansingh">
                             <span class="input-group-btn">
-                                <a href="result.html" class="btn btn-default" role="button"><span class="fa fa-remove"></span></a>
+                                <a href="map1.html" class="btn btn-default" role="button"><span class="fa fa-remove"></span></a>
                             </span>
                             
                         </div>
                       </form>
-                      
-                      
-                      
-                       
+                          
                       <a href="#" class="pull-right no-border" data-toggle="modal" data-target=".bs-example-modal-lg">
                         <span class="fa fa-fw fa-2x fa-filter"></span>
-                      </a>             
-                      
-                      <a href="map3.html" class="pull-right no-border">
-                        <span class="fa fa-fw fa-2x fa-map-marker"></span>
+                      </a>
+                      <a href="result2.html" class="pull-right no-border">
+                        <span class="fa fa-fw fa-2x fa-list"></span>
                       </a> 
-
-                     
-
+                          
+                      
                     </div>
                            <!-- Collect the nav links, forms, and other content for toggling -->
                     <!-- /.navbar-collapse -->
                   </div>
-
                   <!-- /.container-fluid -->
-                </nav>
+            </nav>
 
-                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                
                                 
                                 <h3>Filter</h3>
 
@@ -214,88 +205,47 @@
                             </div>
                           </div>
                         </div>
-            
-                <result id="pad" class="pad60 col-xs-12">
-                    <div class="viewinfo">
-                        <p class="small">Viewing doctors near Sec 9, Vashi &nbsp;<a href="index.html" class="btn btn-default btn-xs">Change</a></p>
-                    </div>
 
-                        
+            <div class="map-content">
+            <iframe src="https://mapsengine.google.com/map/u/1/embed?mid=zMYcNM6KDg2E.kVoC06Q6xJJU" height="600px" width="400px"></iframe></div> 
 
-                    <ul class="media-list">
-                      
-                      
-                      <li class="media">
-                        <a href="docpage1.html">
-                        <div class="pull-left" href="#">
-                          <img class="media-object" src="img/profile.png" width="80px" alt="...">
-                        </div>
-                        <div class="media-body">
-                          <h4 class="media-heading">Dr. Mansingh<div class="fees pull-right"><span class=" fa fa-inr"></span>450</div></h4>
-                          <div class="doc-info">
-                            MBBS
-                            <div class="pull-right"><span class="fa fa-stethoscope"></span> 16 years</div><br>
-                            Ingale Clinic
-                            <div class="pull-right"><span class="fa fa-map-marker"></span> 1.9 km</div><br>
-                            
-                            </div>
-                        </div>
-                        <div class="media-footer">
-                        <div class="pull-left">Not Available</div><i>1 friend and 58 locals consulted him.</i>
-                        </div>
-                        </a>
-                      </li>
-                      
-                      
-
-                      
-                      
-
-                    </ul>
-                                    
-                    
-                </result>
-
-
-
-            
-
-
-                
         </div>
-        <!-- /#page-content-wrapper -->
+        </div>
 
-    </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery Version 1.11.0 -->
 
-    
-    <!-- Menu Toggle Script -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="PushNotification.js"></script>
 
-    <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
-    <script type="text/javascript" src="js/PushwooshiOS.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+
+        <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
+        <script type="text/javascript" src="js/PushwooshiOS.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+            
+        <script type="text/javascript" src="js/index.js"></script>
         
-    <script type="text/javascript" src="js/index.js"></script>
-    
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $("#navbar").toggleClass("navbar-fixed-top");
-        $("#pad").toggleClass("pad60");
+        <!-- Menu Toggle Script -->
+        <script>
         
-         
-    });
-    app.initialize();
-    </script>
 
-</body>
+        
+            
+            
 
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $("#navbar").toggleClass("navbar-fixed-top");
+            $("#pad").toggleClass("pad60");
+            
+             
+        });
+        app.initialize();
+        </script>
+        
+        
+    </body>
 </html>
